@@ -1,0 +1,76 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}{{ titulo_pagina }}{% endblock %}
+
+{% block contenido %}
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-header__title">Contacto</h1>
+        <p class="page-header__desc">Estamos disponibles para responder tus consultas.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="contact-grid">
+
+            <!-- ===== INFORMACIÓN DE CONTACTO ===== -->
+            <div class="contact-info">
+                <h2 class="section__title">Información de contacto</h2>
+
+                <ul class="contact-list">
+                    <li class="contact-list__item">
+                        <span class="contact-list__icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>{{ email }}</p>
+                        </div>
+                    </li>
+                    <li class="contact-list__item">
+                        <span class="contact-list__icon">📞</span>
+                        <div>
+                            <strong>Teléfono</strong>
+                            <p>{{ telefono }}</p>
+                        </div>
+                    </li>
+                    <li class="contact-list__item">
+                        <span class="contact-list__icon">📍</span>
+                        <div>
+                            <strong>Dirección</strong>
+                            <p>{{ direccion }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ===== FORMULARIO (preparado para Módulo siguiente) ===== -->
+            <div class="contact-form-wrapper">
+                <h2 class="section__title">Envianos un mensaje</h2>
+                <p class="contact-form-note">
+                    💡 El formulario funcional se implementará.
+                </p>
+
+                <!-- Formulario estático de demostración -->
+                <div class="form-demo">
+                    <div class="form-group">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-input" placeholder="Tu nombre" disabled />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="tu@email.com" disabled />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-input form-textarea" placeholder="Tu mensaje..." disabled></textarea>
+                    </div>
+                    <button class="btn btn--primary" disabled>Próximamente disponible</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

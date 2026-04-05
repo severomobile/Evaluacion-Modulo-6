@@ -1,0 +1,40 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}{{ titulo_pagina }}{% endblock %}
+
+{% block contenido %}
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-header__title">{{ subtitulo }}</h1>
+        <p class="page-header__desc">{{ descripcion_empresa }}</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section__title">El equipo</h2>
+        <div class="cards-grid">
+            {% for miembro in equipo %}
+            <article class="card card--team">
+                <span class="card__icon card__icon--large">{{ miembro.emoji }}</span>
+                <h3 class="card__title">{{ miembro.nombre }}</h3>
+                <p class="card__subtitle">{{ miembro.rol }}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section section--alt">
+    <div class="container">
+        <h2 class="section__title">Tecnologías que usamos</h2>
+        <ul class="tech-list">
+            {% for tecnologia in tecnologias %}
+            <li class="tech-list__item">{{ tecnologia }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+{% endblock %}

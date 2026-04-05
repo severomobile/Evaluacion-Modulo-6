@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block titulo %}{{ titulo_pagina }}{% endblock %}
+
+{% block contenido %}
+
+<section class="hero">
+    <div class="hero__content">
+        <h1 class="hero__title">{{ bienvenida }}</h1>
+        <p class="hero__subtitle">{{ descripcion }}</p>
+        <a href="{% url 'core:about' %}" class="btn btn--primary">Conocé más →</a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section__title">Nuestros Servicios</h2>
+        <p class="section__subtitle">Lo que ofrecemos a nuestros clientes</p>
+        <div class="cards-grid">
+            {% for servicio in servicios %}
+            <article class="card">
+                <span class="card__icon">{{ servicio.icono }}</span>
+                <h3 class="card__title">{{ servicio.titulo }}</h3>
+                <p class="card__text">{{ servicio.descripcion }}</p>
+            </article>
+            {% empty %}
+            <p>No hay servicios disponibles.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2 class="cta-section__title">¿Listo para comenzar?</h2>
+        <p class="cta-section__text">Contactanos y comenzamos tu próximo proyecto.</p>
+        <a href="{% url 'core:contacto' %}" class="btn btn--secondary">Contactar ahora</a>
+    </div>
+</section>
+
+{% endblock %}

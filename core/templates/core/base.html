@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block titulo %}Alke Web Base{% endblock %} | Alke Solutions</title>
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="navbar__brand">
+        <span class="navbar__logo">⚡</span>
+        <a href="{% url 'core:home' %}" class="navbar__title">Alke Solutions</a>
+    </div>
+    <nav class="navbar__links">
+        <a href="{% url 'core:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}nav-link--active{% endif %}">Inicio</a>
+        <a href="{% url 'core:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}nav-link--active{% endif %}">Acerca de</a>
+        <a href="{% url 'core:contacto' %}" class="nav-link {% if request.resolver_match.url_name == 'contacto' %}nav-link--active{% endif %}">Contacto</a>
+    </nav>
+</header>
+
+<main class="main-content">
+    {% block contenido %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <p class="footer__text">
+        &copy; 2025 Alke Solutions &mdash; Proyecto Módulo 6 &mdash; Django
+    </p>
+</footer>
+
+</body>
+</html>
