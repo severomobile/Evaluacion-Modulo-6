@@ -155,6 +155,6 @@ Las capturas del proyecto en ejecución se encuentran en la carpeta [`/capturas`
 
 | Página | Archivo |
 |--------|---------|
-| Inicio | [ver captura](./capturas/home.png) |
-| Acerca de | [ver captura](./capturas/about.png) |
-| Contacto | [ver captura](./capturas/contacto.png) |
+| Inicio | [ver captura](https://github.com/severomobile/Evaluacion-Modulo-6/blob/main/capturas/home.jpeg) |
+| Acerca de | [ver captura](https://github.com/severomobile/Evaluacion-Modulo-6/blob/main/capturas/about.jpeg) |
+| Contacto | [ver captura](https://github.com/severomobile/Evaluacion-Modulo-6/blob/main/capturas/contacto.jpeg) |
